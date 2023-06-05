@@ -1,0 +1,14 @@
+{% extends "bootstrap/base.html" %}
+{% block body %}
+<div class="container">
+    <form action="/" method='POST'>
+        <label for="title">タイトル</label>
+        <input type="'text" name="title">
+        <label for="'detail">detail</label>
+        <input type="text" name="detail">
+        <label for="due">due</label> 
+        <input type="date" name="due" required>
+        <input type="submit" value="Create">
+    </form>
+</div>
+{% endblock %}

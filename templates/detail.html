@@ -1,0 +1,9 @@
+{% extends "bootstrap/base.html" %}
+
+{% block body %}
+<div class="container">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.detail }}</p>
+    <p>{{ post.due.date }}</p>
+</div>
+{% endblock %}

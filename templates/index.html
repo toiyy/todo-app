@@ -1,0 +1,21 @@
+{% extends "bootstrap/base.html" %}
+
+{% block body %}
+<div class="container">
+    <h1>todo</h1>
+    <a href="/create" role="button">create newtask</a>
+    {% for post in posts %}
+    <h2>タイトル : {{post.title}}</h2>
+    {% if post.due.date() < today %}
+    <div class="alert alert-warning" role="alert">
+        期限切れ
+    </div>
+    {% endif %}
+    <p>期限 : {{post.due.date()}}</p>
+    <a href="detail/{{post.id}}" role="button">detail</a>
+    <a href="update/{{post.id}}" role="button">update</a>
+    <a href="delete/{{post.id}}" role="button">delete</a>
+    {% endfor %}
+</div>
+{% endblock %}
+
